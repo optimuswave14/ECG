@@ -20,11 +20,11 @@ ECG_Project/
 
 ## Objectives
 
-1. **General Model** – Train a CNN on multi patient MIT BIH ECG data
-2. **Personalization** – Fine tune on individual patient data 5%, 10%, 20%
-3. **Variability Analysis** – Study inter patient ECG differences
-4. **Data Efficiency** – Find minimum data needed for fine tuning
-5. **Comparison** – General vs personalized model metrics
+ General Model – Train a CNN on multi patient MIT BIH ECG data
+ Personalization – Fine tune on individual patient data 5%, 10%, 20%
+ Variability Analysis – Study inter patient ECG differences
+ Data Efficiency – Find minimum data needed for fine tuning
+ Comparison – General vs personalized model metrics
 
 ## Setup & Installation
 ### Create Virtual Environment (Recommended)
@@ -41,25 +41,25 @@ pip install -r requirements.txt
 
 ## Steps
 
-### Step 1: Download and preprocess data
+### 1. Download and preprocess data
 ```bash
 python preprocessing.py
 ```
 Downloads MIT BIH Arrhythmia Database via wfdb, segments beats, normalizes signals, and saves processed data
 
-### Step 2: Train general model
+### 2. Train general model
 ```bash
 python train.py
 ```
 Trains CNN on combined multi patient data and saves model to results/general_model.keras
 
-### Step 3: Personalize per patient
+### 3. Personalize per patient
 ```bash
 python personalize.py
 ```
 Fine tunes general model for each patient at 5%, 10%, 20% data fractions
 
-### Step 4: Evaluate and compare
+### 4. Evaluate and compare
 ```bash
 python evaluate.py
 ```
